@@ -151,7 +151,7 @@
       <!-- Main content -->
       <main
         id="main-content"
-        class="h-full w-full overflow-y-auto p-4 transition-opacity duration-100 outline-none"
+        class="h-full w-full overflow-y-auto p-4 transition-opacity duration-100 outline-none lg:flex lg:flex-col"
       >
         <!-- Main content starts -->
         <div
@@ -185,145 +185,155 @@
         </div>
 
         <!-- Booking cards start -->
-        <div class="relative lg:overflow-x-hidden" id="booking-cards-container">
-          <div
-            id="sun"
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0"
-          >
-            <img class="scale-150" src="assets/images/illustration-sun.svg" />
-          </div>
-
-          <div
-            class="mt-6 flex flex-col-reverse gap-8 lg:mt-12 lg:flex lg:flex-row-reverse lg:justify-center lg:gap-0"
-          >
-            <!-- Note from host card -->
+        <div
+          class="relative mt-6 lg:mt-0 lg:grid lg:flex-1 lg:items-center lg:overflow-x-hidden"
+          id="booking-cards-container"
+        >
+          <div>
             <div
-              id="host-card"
-              class="bg-terracotta-gradient shadow-terracotta-500 flex min-h-[500px] w-full max-w-sm flex-col rounded-3xl p-4 text-neutral-200 shadow-2xl lg:max-w-lg lg:rotate-2 lg:p-8"
+              id="sun"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0"
             >
-              <div class="flex-1">
-                <hr
-                  class="border-terracotta-400 mb-4 border-t-2 border-dashed"
-                />
-                <div class="flex w-full justify-between">
-                  <span
+              <img class="scale-150" src="assets/images/illustration-sun.svg" />
+            </div>
+
+            <div
+              class="flex flex-col-reverse gap-8 lg:mt-12 lg:flex lg:flex-row-reverse lg:justify-center lg:gap-0"
+            >
+              <!-- Note from host card -->
+              <div
+                id="host-card"
+                class="bg-terracotta-gradient shadow-terracotta-500 flex min-h-[500px] w-full max-w-sm flex-col rounded-3xl p-4 text-neutral-200 shadow-2xl lg:max-w-lg lg:rotate-2 lg:p-8"
+              >
+                <div class="flex-1">
+                  <hr
+                    class="border-terracotta-400 mb-4 border-t-2 border-dashed"
+                  />
+                  <div class="flex w-full justify-between">
+                    <span
+                      class="font-mono text-sm tracking-widest text-neutral-200/80"
+                      >WELCOME</span
+                    >
+                    <img src="assets/images/icon-sun.svg" />
+                  </div>
+                </div>
+
+                <div class="flex-[3]">
+                  <div class="text-sun-300 font-serif text-xl italic">
+                    A note from your host,
+                  </div>
+                  <div class="mt-2 font-serif text-5xl italic">Margaux.</div>
+                  <div class="mt-8 tracking-wide">
+                    We're so glad you're coming. The shutters will be open, the
+                    lemonade cold, and the cat - Poivre - pretending not to
+                    notice you.
+                  </div>
+                </div>
+
+                <div class="flex flex-1 flex-col justify-end">
+                  <div
                     class="font-mono text-sm tracking-widest text-neutral-200/80"
-                    >WELCOME</span
                   >
-                  <img src="assets/images/icon-sun.svg" />
+                    ROOM
+                  </div>
+                  <div class="font-serif text-2xl text-neutral-200">
+                    La Garrigue
+                  </div>
                 </div>
               </div>
 
-              <div class="flex-[3]">
-                <div class="text-sun-300 font-serif text-xl italic">
-                  A note from your host,
+              <!-- Receipt card -->
+              <div
+                id="receipt-card"
+                class="grid w-full max-w-sm gap-4 rounded-3xl bg-neutral-50 p-7 shadow-xl shadow-neutral-400 lg:max-w-lg lg:-rotate-2"
+              >
+                <div>
+                  <div
+                    class="flex justify-between font-mono text-sm font-medium text-neutral-700"
+                  >
+                    <div>
+                      <span>RECEIPT</span>
+                    </div>
+                    <div class="grid text-right">
+                      <span>№ MS-2026</span>
+                      <span>0421-AH</span>
+                    </div>
+                  </div>
+                  <div class="font-serif text-2xl">Your stay</div>
                 </div>
-                <div class="mt-2 font-serif text-5xl italic">Margaux.</div>
-                <div class="mt-8 tracking-wide">
-                  We're so glad you're coming. The shutters will be open, the
-                  lemonade cold, and the cat - Poivre - pretending not to notice
-                  you.
-                </div>
-              </div>
 
-              <div class="flex flex-1 flex-col justify-end">
-                <div
-                  class="font-mono text-sm tracking-widest text-neutral-200/80"
-                >
-                  ROOM
+                <hr class="border-t-2 border-dashed border-neutral-200" />
+
+                <div class="flex justify-between leading-loose">
+                  <div class="grid text-center">
+                    <span class="mb-2 font-mono text-sm text-neutral-700"
+                      >CHECK IN</span
+                    >
+                    <span class="font-serif text-2xl lg:text-4xl">25 Apr</span>
+                    <span class="leading-normal font-medium text-neutral-700"
+                      >Saturday · 15:00</span
+                    >
+                  </div>
+                  <div class="grid text-center">
+                    <span class="mb-2 font-mono text-sm text-neutral-700"
+                      >CHECK OUT</span
+                    >
+                    <span class="font-serif text-2xl lg:text-4xl">29 Apr</span>
+                    <span class="leading-normal font-medium text-neutral-700"
+                      >Wednesday · 11:00</span
+                    >
+                  </div>
                 </div>
-                <div class="font-serif text-2xl text-neutral-200">
-                  La Garrigue
+
+                <hr class="border-t-2 border-dashed border-neutral-200" />
+
+                <div class="grid gap-2">
+                  <div class="flex justify-between font-medium">
+                    <span>Room · La Garrigue · 4 nights</span>
+                    <span>€ 620.00</span>
+                  </div>
+                  <div class="flex justify-between font-medium">
+                    <span>Breakfast · 2 guests</span>
+                    <span>€ 96.00</span>
+                  </div>
+                  <div
+                    class="flex justify-between font-medium text-neutral-700"
+                  >
+                    <span>Tourist tax</span>
+                    <span>€ 14.40</span>
+                  </div>
+                </div>
+
+                <hr class="border-t-2 border-neutral-700" />
+
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-mono text-sm tracking-wider text-neutral-700"
+                    >TOTAL PAID</span
+                  >
+                  <span class="font-serif text-2xl">€ 730.40</span>
+                </div>
+
+                <div class="mt-2 flex justify-between">
+                  <span class="font-mono text-sm text-neutral-700"
+                    >PAID · WISE · GBP</span
+                  >
+                  <img src="assets/images/icon-barcode.svg" />
                 </div>
               </div>
             </div>
 
-            <!-- Receipt card -->
             <div
-              id="receipt-card"
-              class="grid w-full max-w-sm gap-4 rounded-3xl bg-neutral-50 p-7 shadow-xl shadow-neutral-400 lg:max-w-lg lg:-rotate-2"
+              class="hidden justify-center lg:mt-8 lg:flex lg:w-full lg:gap-2"
             >
-              <div>
-                <div
-                  class="flex justify-between font-mono text-sm font-medium text-neutral-700"
-                >
-                  <div>
-                    <span>RECEIPT</span>
-                  </div>
-                  <div class="grid text-right">
-                    <span>№ MS-2026</span>
-                    <span>0421-AH</span>
-                  </div>
-                </div>
-                <div class="font-serif text-2xl">Your stay</div>
-              </div>
-
-              <hr class="border-t-2 border-dashed border-neutral-200" />
-
-              <div class="flex justify-between leading-loose">
-                <div class="grid text-center">
-                  <span class="mb-2 font-mono text-sm text-neutral-700"
-                    >CHECK IN</span
-                  >
-                  <span class="font-serif text-2xl lg:text-4xl">25 Apr</span>
-                  <span class="leading-normal font-medium text-neutral-700"
-                    >Saturday · 15:00</span
-                  >
-                </div>
-                <div class="grid text-center">
-                  <span class="mb-2 font-mono text-sm text-neutral-700"
-                    >CHECK OUT</span
-                  >
-                  <span class="font-serif text-2xl lg:text-4xl">29 Apr</span>
-                  <span class="leading-normal font-medium text-neutral-700"
-                    >Wednesday · 11:00</span
-                  >
-                </div>
-              </div>
-
-              <hr class="border-t-2 border-dashed border-neutral-200" />
-
-              <div class="grid gap-2">
-                <div class="flex justify-between font-medium">
-                  <span>Room · La Garrigue · 4 nights</span>
-                  <span>€ 620.00</span>
-                </div>
-                <div class="flex justify-between font-medium">
-                  <span>Breakfast · 2 guests</span>
-                  <span>€ 96.00</span>
-                </div>
-                <div class="flex justify-between font-medium text-neutral-700">
-                  <span>Tourist tax</span>
-                  <span>€ 14.40</span>
-                </div>
-              </div>
-
-              <hr class="border-t-2 border-neutral-700" />
-
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-sm tracking-wider text-neutral-700"
-                  >TOTAL PAID</span
-                >
-                <span class="font-serif text-2xl">€ 730.40</span>
-              </div>
-
-              <div class="mt-2 flex justify-between">
-                <span class="font-mono text-sm text-neutral-700"
-                  >PAID · WISE · GBP</span
-                >
-                <img src="assets/images/icon-barcode.svg" />
-              </div>
+              <img src="assets/images/icon-sparkle.svg" />
+              <span
+                class="font-mono text-xs font-medium tracking-widest text-neutral-700/70"
+              >
+                HOVER TO FAN
+              </span>
+              <img src="assets/images/icon-sparkle.svg" />
             </div>
-          </div>
-
-          <div class="hidden justify-center lg:mt-8 lg:flex lg:w-full lg:gap-2">
-            <img src="assets/images/icon-sparkle.svg" />
-            <span
-              class="font-mono text-xs font-medium tracking-widest text-neutral-700/70"
-            >
-              HOVER TO FAN
-            </span>
-            <img src="assets/images/icon-sparkle.svg" />
           </div>
         </div>
 
