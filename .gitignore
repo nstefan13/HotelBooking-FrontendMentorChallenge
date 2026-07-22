@@ -23,7 +23,8 @@ npm-debug.log*
 
 # Production
 /build
-/dist
+/dist/*
+!/dist/style.css
 /.next
 /out
 
