@@ -52,12 +52,14 @@
     <div class="relative lg:flex lg:h-screen lg:overflow-hidden">
       <aside
         id="sidebar"
-        class="absolute left-0 flex h-[90vh] w-full -translate-x-full flex-col transition-transform duration-200 outline-none lg:flex lg:h-full lg:w-1/5 lg:flex-col lg:border-r-1 lg:border-neutral-400"
+        class="absolute left-0 flex h-[90vh] w-full -translate-x-full flex-col transition-transform duration-200 outline-none lg:static lg:flex lg:h-full lg:w-1/4 lg:translate-0 lg:flex-col lg:border-r-1 lg:border-neutral-400"
       >
-        <!-- <div class="flex items-center justify-between p-4">
-          <img src="assets/images/logo.svg" />
+        <div class="hidden lg:block">
+          <div class="flex items-center justify-between p-4">
+            <img src="assets/images/logo.svg" />
+          </div>
+          <hr class="mx-4 border-t-1 border-neutral-400" />
         </div>
-        <hr class="mx-4 border-t-1 border-neutral-400" /> -->
 
         <div class="flex flex-1 flex-col p-4">
           <!-- Guest navigation -->
@@ -183,7 +185,7 @@
         </div>
 
         <!-- Booking cards start -->
-        <div class="relative" id="booking-cards-container">
+        <div class="relative lg:overflow-x-hidden" id="booking-cards-container">
           <div
             id="sun"
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0"
